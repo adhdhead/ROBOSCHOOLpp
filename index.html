@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ROBO SCHOOL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="body">
+<div class="navbar-container">
+    <div class="navbar-mobile">
+        <div class="navbar-mobile">
+            <h1 class="header-nav-h1-mobile">
+                ROBO.SCHOOL
+            </h1>
+            <div class="mobile-buttons">
+                <div class="menu-toggle-button-mobile" id="mobile-menu">
+                    <span onclick="toggleNav()"><img src="icons/menu_light.png" alt=""></span>
+                    <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()"><img src="icons/cross.png" alt=""></a>
+                        <div class="overlay-content">
+                            <a href="#info">О школе</a>
+                            <a href="#Coaches">Тренеры</a>
+                            <a href="#Pricing">Стоимость</a>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function toggleNav() {
+                        var nav = document.getElementById("myNav");
+                        if (nav.style.height === "100%") {
+                            nav.style.height = "0%";
+                        } else {
+                            nav.style.height = "100%";
+                        }
+                        }
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function(e) {
+                            e.preventDefault();
+
+                            const targetId = this.getAttribute('href').substring(1);
+                            const targetElement = document.getElementById(targetId);
+
+                            if (targetElement) {
+                                window.scrollTo({
+                                    top: targetElement.offsetTop,
+                                    behavior: 'smooth'
+                                });
+                                toggleNav();
+                            }
+                        });
+                    });
+                    window.addEventListener('scroll', function() {
+                        var navbar = document.querySelector('.navbar-container');
+                        var buttons = document.querySelectorAll('.menu-toggle-button-mobile, .phone-number-mobile');
+                        var menuButtonImage = document.querySelector('.menu-toggle-button-mobile img');
+                        var callButtonImage = document.querySelector('.phone-number-mobile img');
+                        var headerHeight = document.querySelector('header').offsetHeight;
+                        var mainSection = document.querySelector('main');
+                        var scrollPosition = window.scrollY;
+                        var mainSectionTop = mainSection.offsetTop;
+
+                        if (scrollPosition >= mainSectionTop) {
+                            navbar.style.backgroundColor = '#FFFFFF';
+                            navbar.style.color = '#141024';
+                            buttons.forEach(button => {
+                                button.style.borderColor = '#141024';
+                            });
+                            menuButtonImage.src = 'icons/menu_dark.png';
+                            callButtonImage.src = 'icons/call_dark.png';
+                        } else {
+                            navbar.style.backgroundColor = '#141024';
+                            navbar.style.color = '#FFFFFF';
+                            buttons.forEach(button => {
+                                button.style.borderColor = '#FFFFFF';
+                            });
+                            menuButtonImage.src = 'icons/menu_light.png';
+                            callButtonImage.src = 'icons/call_light.png';
+                        }
+                    });
+                </script>
+                <div class="phone-number-mobile">
+                    <a href=""><img src="icons/call_light.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="header-browser">
+    <div class="navbar">
+        <h1 class="header-nav-h1">
+            ROBO.SCHOOL
+        </h1>
+            <nav class="menu-items">
+                <a href="#info">О Школе</a>
+                <a href="#Coaches">Тренеры</a>
+                <a href="#Pricing">Стоимость</a>
+            </nav>
+        <div class="phone-number">
+            +7 800 000 11 22
+        </div>
+    </div>
+    <div class="landing-container">
+        <div class="landing-text-container">
+            <section id="info">
+                <h2 class="landing-title">
+                    ROBO SCHOOL
+                </h2>
+            </section>
+            <p class="landing-description">
+                Курсы повышения квалификации по робототехнике<br>для педагогов начальной школы
+            </p>
+            <button class="landing-button" type="button">
+                Записаться на курс
+            </button>
+        </div>
+        <span id="image-span" class="landing-img">
+            <img src="media/student.png" alt="Landing student image example">
+        </span>
+    </div>
+</header>
+<header class="header-mobile">
+    <div class="landing-container-mobile">
+        <div class="landing-text-container-mobile">
+                <h2 class="landing-title-mobile">
+                    ROBO SCHOOL
+                </h2>
+            <p class="landing-description-mobile">
+                Курсы повышения квалификации<br> по робототехнике для педагогов<br> начальной школы
+            </p>
+            <span id="image-span" class="landing-img-mobile">
+            <img src="media/student.png" alt="Landing student image example">
+            </span>
+            <button class="landing-button-mobile" type="button">
+                Записаться на курс
+            </button>
+        </div>
+    </div>
+</header>
+<main class="main-container">
+    <div class="div-width">
+        <div class="div-width">
+            <h2 class="main-h2-text">
+                <section id="info">
+                <span class="span-bold">Robo School</span> – учреждение для
+                формирования кадрового <br>педагогического
+                резерва в сфере робототехники <br>и программирования
+                </section>
+            </h2>
+            <div class="first-text-container">
+                <div><p><span class="span-red">10<br></span> УМК по различным <br>направлениям по робототехнике</p>
+                </div>
+                <div><p><span class="span-red">20<br></span> Школ, в которых запущена <br>робототехника</p></div>
+                <div><p><span class="span-red">100<br></span> Педагогов прошедших курсы <br>повышения квалификации</p>
+                </div>
+                <div><p><span class="span-red">1000<br></span> Обученных детей на <br>базе собственных центров</p></div>
+            </div>
+        </div>
+        <div>
+            <h3 class="main-h3-text">
+                Что вы получите после курса
+            </h3>
+            <div class="second-text-container">
+                <div>
+                    <p>
+                        <span class="span-black">Удостоверение<br></span> Дающее право преподавать робототехнику<br>
+                        детей 6-12 лет в образовательных<br> учреждениях
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span class="span-black">Знания<br></span> По основам разработки учебно<br>-методических
+                        комплексов<br> по робототехнике и программированию
+                    </p>
+                </div>
+                <div class="tooltip-container">
+                    <div class="span-black">Практику <img src="icons/tooltip.png" alt="" class="tooltip-icon"></div>
+                    Возможность пройти практику<br> по преподаванию робототехники на базе<br> R:ED LAB (в оффлайн
+                    или онлайн формате)
+                    <span class="tooltiptext">При наличии свободных мест</span>
+                </div>
+            </div>
+            <div class="teachers-block">
+                <section id="Coaches">
+                    <h4 class="main-h4-text">Профессиональные тренеры</h4>
+                </section>
+                <div class="teachers-inline">
+                    <div class="teacher-profile">
+                        <img src="media/teacher1.jpg" alt="">
+                        <span class="teacher-name-span">Ирина Лайм</span>
+                        <span class="teacher-text-span">преподаватель по робототехнике</span>
+                        <label for="modalToggle1" class="teacher-modal-button">Подробнее</label>
+                    </div>
+                    <div class="teacher-profile">
+                        <img src="media/teacher2.jpg" alt="">
+                        <span class="teacher-name-span">Марина Орлова</span>
+                        <span class="teacher-text-span">преподаватель по робототехнике</span>
+                        <label for="modalToggle1" class="teacher-modal-button">Подробнее</label>
+                    </div>
+                    <div class="teacher-profile">
+                        <img src="media/teacher3.jpg" alt="">
+                        <span class="teacher-name-span">Максим Петров</span>
+                        <span class="teacher-text-span">преподаватель по программированию</span>
+                        <label for="modalToggle1" class="teacher-modal-button">Подробнее</label>
+                    </div>
+                    <div class="teacher-profile">
+                        <img src="media/teacher4.jpg" alt="">
+                        <span class="teacher-name-span">Константин Назаров</span>
+                        <span class="teacher-text-span">преподаватель по робототехнике</span>
+                        <label for="modalToggle1" class="teacher-modal-button">Подробнее</label>
+                    </div>
+                    <div class="teacher-profile">
+                        <img src="media/teacher5.jpg" alt="">
+                        <span class="teacher-name-span">Лиза Весенняя</span>
+                        <span class="teacher-text-span">преподаватель по программированию</span>
+                        <label for="modalToggle1" class="teacher-modal-button">Подробнее</label>
+                    </div>
+                </div>
+            </div>
+            <input type="checkbox" id="modalToggle1" class="modal-toggle-checkbox">
+
+
+            <div id="modal" class="modal-container">
+                <div class="modal-wrapper">
+                    <div class="modal-container-header">
+                        <img class="photo" src="media/teacher1.jpg" alt="Ирина Лайм">
+                        <div>
+                            <span class="teacher-name-span modal-container-header-info ">Ирина Лайм</span>
+                            <span class="teacher-text-span modal-container-header-info ">преподаватель по робототехнике</span>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="icons" src="icons/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank">
+                                <img class="icons" src="icons/instagram.png" alt="Instagram">
+                            </a>
+                        </div>
+                        <label for="modalToggle1" class="close">Закрыть</label>
+                    </div>
+                        <div class="modal-container-accordion">
+                            <a href="#tab1" class="tab">Образование</a>
+                            <a href="#tab2" class="tab">Опыт работы</a>
+                            <a href="#tab3" class="tab">Награды</a>
+                            <div class="tab-content-wrapper">
+                                <div class="tab-content-container">
+                                    <div id="tab1" class="tab-content">
+                                        Сентябрь 1995 — Июнь 2000 <br>
+                                        Санкт-Петербургский политехнический университет Петра Великого<br>
+                                        Факультет: Компьютерных наук и технологий<br>
+                                        Специальность: Математика и компьютерные науки<br>
+                                        Форма обучения: Очная
+                                        <div class="tab-content-container-span">
+                                            Курсы и тренинги
+                                        </div>
+                                        Ноябрь 2020 — Февраль 2021<br>
+                                        Программа дополнительного образования «3D Моделирование»<br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </div>
+                                    <div id="tab2" class="tab-content">
+                                        SAMPLETEXT
+                                    </div>
+                                    <div id="tab3" class="tab-content">
+                                        MORESAMPLETEXT. <br> tab3 sampletext
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <section id="Pricing">
+                <h5 class="main-h5-text"> Выберите нужный пакет </h5>
+            </section>
+            <div class="price-container">
+                <div class="price-tab">
+                    <span class="name">-PRO-</span>
+                    <span class="price">20.000$</span>
+                    <span class="desc">УМК по робототехнике<br> и программированию</span>
+                    <a href="" class="contact">Оставить заявку</a>
+                </div>
+                <div class="price-tab">
+                    <span class="name">-ROBO-</span>
+                    <span class="price">15.000$</span>
+                    <span class="desc">УМК по робототехнике</span>
+                    <a href="" class="contact">Оставить заявку</a>
+                </div>
+                <div class="price-tab">
+                    <span class="name">-PROG-</span>
+                    <span class="price">10.000$</span>
+                    <span class="desc">УМК по программированию</span>
+                    <a href="" class="contact">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="upper-bar">
+        <div class="upper-bar-info">
+            <div class="info">
+                <span class="info-header">Запишитесь на курс<br> со скидкой 10%</span>
+                <span class="info-description">Акция действительна до 10 марта 2023 года</span>
+            </div>
+            <div class="register-field">
+                <input type="text" id="name" name="name" placeholder="Имя">
+                <input type="text" id="name" name="name" placeholder="Телефон">
+                <input type="text" id="name" name="name" placeholder="E-mail">
+                <button class="register-button">Оформить заявку</button>
+            </div>
+        </div>
+        <span class="background">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+    </div>
+    <div class="bottom-bar-mobile">
+        <div class="bottom-bar-copyright">
+            <span class="copyright-header">ROBO.SCHOOL</span>
+            <span class="bottom-bar-number">+7 800 000 11 22</span>
+            <span class="copyright-text">© ROBO.SCHOOL</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
