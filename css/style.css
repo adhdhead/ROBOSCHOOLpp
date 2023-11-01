@@ -588,7 +588,79 @@ img {
     font-size: 30px;
     line-height: 48px;
 }
-@media (max-width: 1600px) {
+/*MEDIUM SCREEN BROWSERS*/
+@media (min-width:1440px) and (max-width: 1920px) {
+    .header-nav-h1 {
+        margin-left: 0;
+    }
+    .landing-text-container {
+        margin-left: 5%;
+    }
+    .main-container {
+        padding: 100px 20vh;
+    }
+    .landing-img {
+        margin-right: 5%;
+    }
+    .teacher-profile {
+        flex: 0 0 40vh;
+    }
+    .price-tab {
+        width: 30%;
+    }
+    .price-container .contact {
+        width: 90%;
+    }
+    .price-container {
+    }
+    .info {
+        margin-left: 15%;
+        margin-top: 5%;
+    }
+    .register-field {
+        margin-top: 5%;
+    }
+    .register-field input {
+        margin-right: 25vh;
+    }
+}
+/*SMALL SCREEN BROWSERS*/
+@media (min-width:1024px) and (max-width: 1440px) {
+    .header-nav-h1 {
+        margin-left: 0;
+    }
+    .landing-text-container {
+        margin-left: 5%;
+    }
+    .main-container {
+        padding: 100px 5%;
+    }
+    .landing-img {
+        margin-right: 5%;
+    }
+    .teacher-profile {
+        flex: 0 0 45%;
+    }
+    .price-tab {
+        width: 30%;
+    }
+    .price-container .contact {
+        width: 90%;
+    }
+    .info {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    .register-field {
+        margin-top: 5%;
+    }
+    .register-field input {
+        margin-right: 7vh;
+    }
+
+}
+/*MOBILE AND TABLETS*/
+@media (max-width: 1024px) {
     .header-browser {
         display: none;
     }
